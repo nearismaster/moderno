@@ -9,9 +9,8 @@ const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
 function sassTask(done) {
-    console.log('Sass task is running');
     const processors = [autoprefixer()];
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(postcss(processors))
@@ -41,19 +40,16 @@ gulp.task('script', function () {
 });
 
 function htmlTask(done) {
-    console.log('HTML task is running');
     return gulp.src('app/*.html')
         .pipe(browserSync.reload({ stream: true }));
 }
 
 function jsTask(done) {
-    console.log('JS task is running');
     return gulp.src('app/js/*.js')
         .pipe(browserSync.reload({ stream: true }));
 }
 
 function browserSyncTask(done) {
-    console.log('BrowserSync is running');
     browserSync.init({
         server: {
             baseDir: "app/"
@@ -70,7 +66,7 @@ function browserSyncTask(done) {
 }
 
 function watchTask() {
-    gulp.watch('app/scss/style.scss', sassTask);
+    gulp.watch('app/scss/**/*.scss', sassTask);
     gulp.watch('app/*.html', htmlTask);
     gulp.watch('app/js/*.js', jsTask);
 }
