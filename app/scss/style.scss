@@ -351,17 +351,21 @@
     text-align: center;
     padding: 0 15px;
     transition: all .5s;
-    .adventeges__item-images{
+
+    .adventeges__item-images {
         transition: all .5s;
     }
+
     &:hover {
 
         .adventeges__item-images {
             background-color: $green;
-            path{
+
+            path {
                 stroke: #fff;
             }
-            rect{
+
+            rect {
                 fill: #fff;
             }
         }
@@ -404,8 +408,43 @@
     }
 }
 
-
-
-
-
 // end adventeges
+// start author
+
+.author{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 265px;
+        span{
+            @include f700;
+        }
+    }
+    &__link{
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
+
+
+// end author
