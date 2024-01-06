@@ -8,11 +8,11 @@
 
 @font-face {
     font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?mytxg9');
-    src: url('fonts/icomoon.eot?mytxg9#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?mytxg9') format('truetype'),
-        url('fonts/icomoon.woff?mytxg9') format('woff'),
-        url('fonts/icomoon.svg?mytxg9#icomoon') format('svg');
+    src: url('../fonts/icomoon.eot?ytssfg');
+    src: url('../fonts/icomoon.eot?ytssfg#iefix') format('embedded-opentype'),
+           url('../fonts/icomoon.ttf?ytssfg') format('truetype'),
+           url('../fonts/icomoon.woff?ytssfg') format('woff'),
+           url('../fonts/icomoon.svg?ytssfg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -22,7 +22,7 @@
 [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak: never;
+   //  speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;

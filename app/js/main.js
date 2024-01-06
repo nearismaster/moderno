@@ -20,19 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
         stars.forEach((star, index) => {
             star.addEventListener('click', () => {
                 const value = star.getAttribute('data-value');
-
-                // Удалите все классы 'selected' перед добавлением нового значения
                 stars.forEach((s) => {
                     s.classList.remove('selected');
                 });
-
-                // Добавьте класс 'selected' к звездам до текущей
                 for (let i = 0; i <= index; i++) {
                     stars[i].classList.add('selected');
                 }
-
-                // alert(`Вы поставили рейтинг ${value} в блоке с ID: ${rating.id}`);
-                // Добавьте здесь логику для сохранения рейтинга или других действий
             });
 
             star.addEventListener('mouseover', () => {
@@ -52,5 +45,31 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+});
+
+$('.menu__btn').on('click', function () {
+   $('.menu__list').slideToggle();
+});
+
+$('.header__btn-menu').on('click', function () {
+   $('.header__box').toggleClass('active');
+});
+
+// document.getElementById("modal").addEventListener("click", () => {
+//    new Fancybox(
+//       [
+//          {
+//             src: "<p>Lorem ipsum dolor sit amet.</p>",
+//             type: "html",
+//          },
+//       ],
+//       {
+//          // Your custom options
+//       }
+//    );
+// })
+
+Fancybox.bind('[data-fancybox]', {
+   // Custom options for all galleries
 });
 

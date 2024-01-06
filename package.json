@@ -9,6 +9,7 @@
     "author": "Vladislav Khapkov",
     "license": "ISC",
     "devDependencies": {
+        "@fancyapps/ui": "^5.0.33",
         "autoprefixer": "^10.4.16",
         "browser-sync": "^2.29.3",
         "css-min": "^1.0.0",
